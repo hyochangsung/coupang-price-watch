@@ -39,6 +39,7 @@ flowchart TD
         D -->|수집→정제→적재 스케줄링| E[("PostgreSQL")]
         E -->|분석용 데이터 저장| F(["Grafana Dashboard<br>(가격 이력·할인율 시각화)"])
     end
+    style Stage1 fill:transparent,stroke:#2ea043,stroke-width:2px,stroke-dasharray: 5 5
 ```
 ```mermaid
 flowchart TD
@@ -48,9 +49,8 @@ flowchart TD
         I -->|가격 변동 감지·조건 판단| J[("S3 적재")]
         I -->|평소보다 낮으면 즉시 알림| K(["카카오톡 알림"])
     end
-    
-    style Stage1 fill:#f9f9f9,stroke:#ccc,stroke-width:2px
-    style Stage2 fill:#f9f9f9,stroke:#ccc,stroke-width:2px
+
+    style Stage2 fill:transparent,stroke:#2ea043,stroke-width:2px,stroke-dasharray: 5 5
 ```
 
 ### S3 폴더 구조
